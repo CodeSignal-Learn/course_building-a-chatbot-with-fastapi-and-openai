@@ -1,89 +1,99 @@
+/* === Page Setup === */
 html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+    height: 100vh;         /* Full screen height */
+    margin: 0;             /* Remove default margin */
+    padding: 0;            /* Remove default padding */
 }
 
+/* === Body Layout === */
 body {
-    display: flex;
-    flex-direction: column;
-    font-family: Arial, sans-serif;
+    display: flex;         /* Use flex layout */
+    flex-direction: column;/* Stack children vertically */
+    font-family: Arial, sans-serif; /* Set font */
 }
 
+/* === Header Section === */
 .header {
-    text-align: center;
-    padding: 10px;
+    text-align: center;    /* Center text */
+    padding: 10px;         /* Add spacing */
 }
 
+/* === Suggestion Buttons === */
 .suggestions {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    padding: 10px;
-}
-
-#chat-container {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    max-width: 800px;
-    width: 100%;
-    margin: 0 auto;
-}
-
-#messages {
-    flex-grow: 1;
-    margin: 10px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    overflow-y: auto;
-}
-
-.message {
-    margin: 10px 0;
-    padding: 8px;
-}
-
-.user {
-    text-align: right;
-}
-
-.assistant {
-    text-align: left;
-}
-
-.input-container {
-    display: flex;
-    gap: 5px;
-    margin: 10px;
-}
-
-.input-wrapper {
-    flex-grow: 1;
-}
-
-#message-input {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-}
-
-button {
-    padding: 8px 16px;
-    color: #fff;
-    background: #1976d2;
-    border: none;
-    cursor: pointer;
-}
-
-#new-chat-btn {
-    background: #2e7d32;
+    display: flex;         /* Use flex for buttons */
+    justify-content: center; /* Center buttons */
+    gap: 10px;             /* Space between buttons */
+    padding: 10px;         /* Add spacing */
 }
 
 .suggestion-btn {
-    background: #ff9800;
-    color: #fff;
-    padding: 8px 16px;
-    border: none;
-    cursor: pointer;
+    background: #ff9800;   /* Orange background */
+    color: #fff;           /* White text */
+    padding: 8px 16px;     /* Button padding */
+    border: none;          /* Remove border */
+    cursor: pointer;       /* Pointer on hover */
+}
+
+/* === Chat Container === */
+#chat-container {
+    display: flex;         /* Use flex layout */
+    flex-direction: column;/* Stack vertically */
+    flex: 1;               /* Take remaining space */
+    max-width: 800px;      /* Limit width */
+    width: 100%;           /* Full width */
+    margin: 0 auto;        /* Center horizontally */
+    overflow: hidden;      /* Hide scroll here */
+}
+
+/* === Message Area === */
+#messages {
+    flex: 1;               /* Fill space */
+    margin: 10px;          /* Outer spacing */
+    border: 1px solid #ccc;/* Light border */
+    padding: 10px;         /* Inner spacing */
+    overflow-y: auto;      /* Scroll when needed */
+}
+
+/* === Individual Messages === */
+.message {
+    margin: 10px 0;        /* Space between messages */
+    padding: 8px;          /* Message padding */
+}
+
+.user {
+    text-align: right;     /* Align user message right */
+}
+
+.assistant {
+    text-align: left;      /* Align assistant message left */
+}
+
+/* === Input Area === */
+.input-container {
+    display: flex;         /* Flex layout */
+    gap: 5px;              /* Space between elements */
+    margin: 10px;          /* Outer spacing */
+}
+
+.input-wrapper {
+    flex-grow: 1;          /* Let input expand */
+}
+
+#message-input {
+    width: 100%;           /* Full width input */
+    padding: 8px;          /* Input padding */
+    border: 1px solid #ccc;/* Light border */
+}
+
+/* === Buttons === */
+button {
+    padding: 8px 16px;     /* Button size */
+    color: #fff;           /* White text */
+    background: #1976d2;   /* Blue background */
+    border: none;          /* No border */
+    cursor: pointer;       /* Pointer cursor */
+}
+
+#new-chat-btn {
+    background: #2e7d32;   /* Green background */
 }
